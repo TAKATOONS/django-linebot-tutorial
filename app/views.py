@@ -45,7 +45,7 @@ class CallbackView(View):
     @staticmethod
     @handler.add(MessageEvent, message=TextMessage)
     def message_event(event):
-        #オウム返し
+
         reply = event.message.text
         
         #AI
@@ -53,10 +53,20 @@ class CallbackView(View):
         #response = client.talk(event.message.text)
         #reply = response['results'][0]['reply']
         
-        #reply="こんにちは"
-        
+        if reply=='ただいま':
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text="おかえりなさい！今日もお疲れ様です！")
+            )
+
+        elif reply=='おかえり':
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text="おかえりなさい！今日もお疲れ様です！")
+            )
+
         #メッセージ送信部分
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=reply)
-        )
+        #line_bot_api.reply_message(
+        #    event.reply_token,
+        #    TextSendMessage(text=reply)
+        #)
