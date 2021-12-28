@@ -46,14 +46,14 @@ class CallbackView(View):
     @handler.add(MessageEvent, message=TextMessage)
     def message_event(event):
         #オウム返し
-        #reply = event.message.text
+        reply = event.message.text
         
         #AI
         #client = pya3rt.TalkClient(talk_api)
         #response = client.talk(event.message.text)
         #reply = response['results'][0]['reply']
         
-        reply="こんにちは"
+        #reply="こんにちは"
         
         #メッセージ送信部分
         line_bot_api.reply_message(
