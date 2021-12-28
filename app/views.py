@@ -59,10 +59,10 @@ class CallbackView(View):
                 TextSendMessage(text="おかえりなさい！今日もお疲れ様です！")
             )
 
-        elif reply=='おかえり':
+        elif reply=='おはよう':
             line_bot_api.reply_message(
                 event.reply_token,
-                TextSendMessage(text="おかえりなさい！今日もお疲れ様です！")
+                TextSendMessage(text="おはようございます！今日も頑張りましょう！")
             )
 
         #メッセージ送信部分
