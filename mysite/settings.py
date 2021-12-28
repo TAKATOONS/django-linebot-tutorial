@@ -126,12 +126,6 @@ try:
 except ImportError:
     pass
 
-import django_heroku
-import os
-CHANNEL_ACCESS_TOKEN = os.environ["CHANNEL_ACCESS_TOKEN"]
-CHANNEL_SECRET = os.environ["CHANNEL_SECRET"]
-TALK_API = os.environ["TALK_API"]
-
 if not DEBUG:
     import django_heroku
     import os
