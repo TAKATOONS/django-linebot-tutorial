@@ -49,9 +49,9 @@ class CallbackView(View):
         #reply = event.message.text
         
         #AI
-        client = pya3rt.TalkClient(talk_api)
-        response = client.talk(event.message.text)
-        reply = response['results'][0]['reply']
+        #client = pya3rt.TalkClient(talk_api)
+        #response = client.talk(event.message.text)
+        #reply = response['results'][0]['reply']
         
         reply="こんにちは"
         
